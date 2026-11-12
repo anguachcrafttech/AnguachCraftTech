@@ -2,895 +2,1226 @@
 <html lang="am">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Anguach CraftTech — የክሮሼትና የእጅ ጥበብ ምርቶች፣ ሥልጠና እና የትብብር እድሎች።">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anguach CraftTech - የእጅ ጥበብን ከፈጠራና ከቴክኖሎጂ ጋር እናቀናጃለን።">
   <meta name="theme-color" content="#101b31">
   <title>Anguach CraftTech | አንጓች የእጅ ጥበብና ቴክኖሎጂ</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --navy: #101b31;
-      --navy-2: #172640;
+      --navy-light: #1d2d49;
       --gold: #e5b94f;
-      --gold-light: #fff5d9;
-      --ink: #243047;
-      --muted: #647084;
-      --paper: #fbfaf7;
-      --white: #fff;
-      --line: #e8e4da;
-      --shadow: 0 14px 38px rgba(16, 27, 49, .10);
-      --radius: 22px;
+      --gold-light: #f6dfa0;
+      --cream: #fbf8f0;
+      --white: #ffffff;
+      --text: #283247;
+      --muted: #6d7482;
+      --shadow: 0 10px 35px rgba(16, 27, 49, .10);
+      --radius: 18px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
     body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: "Noto Sans Ethiopic", "Segoe UI", Arial, sans-serif;
-      line-height: 1.85;
+      font-family: 'Noto Sans Ethiopic', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
     }
-    img, video { max-width: 100%; }
-    a { color: inherit; }
-    button, input, select, textarea { font: inherit; }
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      color: var(--white);
-      background: rgba(16, 27, 49, .97);
-      border-bottom: 3px solid var(--gold);
-      box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    img {
+      max-width: 100%;
+      display: block;
     }
-    .nav-wrap {
-      width: min(1160px, calc(100% - 32px));
-      min-height: 76px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
       margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      text-decoration: none;
-      min-width: 0;
-    }
-    .brand-mark {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      color: var(--navy);
-      background: var(--gold);
-      border-radius: 14px;
-      font-size: 1.25rem;
-    }
-    .brand-name {
-      display: block;
-      color: var(--gold);
-      font-size: 1.05rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: .2px;
-    }
-    .brand-subtitle {
-      display: block;
-      color: #e9edf4;
-      font-size: .68rem;
-      line-height: 1.5;
-    }
-    .main-nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-    .main-nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 9px 12px;
-      border-radius: 9px;
-      font-size: .88rem;
-      font-weight: 600;
-      transition: .2s;
-    }
-    .main-nav a:hover, .main-nav a:focus-visible {
-      color: var(--gold);
-      background: rgba(255,255,255,.08);
-    }
-    .menu-toggle {
-      display: none;
-      color: var(--gold);
-      background: transparent;
-      border: 1px solid rgba(229,185,79,.55);
-      border-radius: 10px;
-      padding: 8px 12px;
-      cursor: pointer;
     }
 
-    .hero {
-      min-height: 510px;
-      padding: 90px 20px 85px;
-      display: grid;
-      place-items: center;
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
       text-align: center;
-      color: #fff;
-      background:
-        linear-gradient(120deg, rgba(10,18,34,.91), rgba(10,18,34,.62)),
-        url("hero.jpg") center/cover no-repeat,
-        var(--navy);
+      margin-bottom: 42px;
     }
-    .hero-content { width: min(850px, 100%); }
-    .eyebrow {
-      display: inline-block;
-      margin: 0 0 18px;
-      padding: 6px 15px;
-      color: var(--gold);
-      border: 1px solid rgba(229,185,79,.7);
-      border-radius: 999px;
-      font-size: .88rem;
-      font-weight: 700;
+
+    .section-title h2 {
+      color: var(--navy);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      margin-bottom: 10px;
     }
-    .hero h1 {
-      margin: 0;
-      color: var(--gold);
-      font-size: clamp(2.1rem, 6vw, 4rem);
-      line-height: 1.3;
-      font-weight: 800;
-      text-shadow: 0 3px 15px rgba(0,0,0,.35);
+
+    .section-title span {
+      display: block;
+      width: 65px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 10px;
+      margin: 12px auto;
     }
-    .hero .hero-amharic-name {
-      margin: 8px auto 14px;
-      color: #fff;
-      font-size: clamp(1.05rem, 2.7vw, 1.45rem);
-      font-weight: 700;
-      letter-spacing: .1px;
-    }
-    .hero p {
+
+    .section-title p {
+      color: var(--muted);
       max-width: 700px;
-      margin: 18px auto 28px;
-      color: #f5f2e9;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      margin: auto;
     }
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      min-height: 48px;
-      padding: 11px 22px;
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: .2s;
-    }
-    .btn-primary { color: var(--navy); background: var(--gold); }
-    .btn-primary:hover { background: #f2cf79; transform: translateY(-2px); }
-    .btn-outline { color: #fff; background: transparent; }
-    .btn-outline:hover { color: var(--navy); background: var(--gold); }
-
-    .section {
-      width: min(1160px, calc(100% - 32px));
-      margin: auto;
-      padding: 76px 0;
-    }
-    .section-heading {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: clamp(1.55rem, 4vw, 2.15rem);
-      line-height: 1.45;
-    }
-    .section-intro {
-      max-width: 760px;
-      margin: 0 0 32px;
-      color: var(--muted);
-    }
-    .heading-line {
-      width: 76px;
-      height: 4px;
-      margin: 0 0 27px;
-      border-radius: 10px;
+      padding: 13px 25px;
+      border-radius: 30px;
       background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      border: 2px solid var(--gold);
+      cursor: pointer;
+      transition: .3s;
     }
 
-    .about-panel {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(26px, 5vw, 48px);
-      color: #fff;
-      background: linear-gradient(135deg, var(--navy), var(--navy-2));
-      border-left: 7px solid var(--gold);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      box-shadow: var(--shadow);
-    }
-    .about-panel h2 { margin: 0 0 15px; color: var(--gold); font-size: 1.75rem; }
-    .about-panel p { margin: 0; color: #f0f2f6; }
-    .about-note {
-      margin-top: 23px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.18);
-      color: #ffe9b1;
-      font-weight: 600;
+    .btn:hover {
+      background: transparent;
+      color: var(--gold);
+      transform: translateY(-3px);
     }
 
-    .focus-grid, .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: var(--white);
     }
-    .focus-item, .service-item {
-      height: 100%;
-      padding: 24px 20px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      box-shadow: 0 7px 22px rgba(16,27,49,.045);
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--navy);
     }
-    .focus-icon, .service-icon {
-      width: 48px;
-      height: 48px;
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--navy);
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 4px 18px rgba(0,0,0,.12);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
       display: grid;
       place-items: center;
-      margin-bottom: 14px;
+      font-size: 21px;
+    }
+
+    .brand-name {
+      line-height: 1.4;
+    }
+
+    .brand-name strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.05rem;
+    }
+
+    .brand-name small {
+      font-size: .72rem;
+      font-weight: 400;
+      color: #eee;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: .9rem;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(8,17,33,.91), rgba(8,17,33,.66), rgba(8,17,33,.30)),
+        url("Images/brand.jpg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid rgba(229,185,79,.7);
+      border-radius: 30px;
+      padding: 7px 17px;
+      margin-bottom: 22px;
+      font-size: .9rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 6vw, 4rem);
+      line-height: 1.25;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      color: #f1f1f1;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      cursor: zoom-in;
+    }
+
+    .about-text h3 {
       color: var(--navy);
-      background: var(--gold-light);
-      border-radius: 14px;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
     }
-    .focus-item h3, .service-item h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.08rem; }
-    .focus-item p, .service-item p { margin: 0; color: var(--muted); font-size: .93rem; }
 
-    .dark-section {
-      color: #fff;
-      background: var(--navy);
+    .about-text p {
+      margin-bottom: 15px;
+      color: var(--muted);
     }
-    .dark-section .section-heading { color: var(--gold); }
-    .dark-section .section-intro { color: #d5dce7; }
-    .video-panel {
-      max-width: 900px;
-      margin: 25px auto 0;
+
+    .about-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+      margin-top: 22px;
+    }
+
+    .point {
+      background: var(--white);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .point i {
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      background: #f1ecdf;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: var(--white);
+      padding: 28px 18px;
+      text-align: center;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: .3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .category-card i {
+      font-size: 34px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .category-card h3 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .category-card p {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* GALLERY */
+    .gallery-section {
+      background: var(--white);
+    }
+
+    .gallery-category {
+      margin-bottom: 45px;
+    }
+
+    .gallery-category h3 {
+      color: var(--navy);
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+      padding-left: 13px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
       overflow: hidden;
-      background: #05080e;
-      border: 2px solid var(--gold);
-      border-radius: 18px;
-      box-shadow: 0 15px 38px rgba(0,0,0,.25);
+      border-radius: 15px;
+      background: #eee;
+      box-shadow: var(--shadow);
+      cursor: zoom-in;
     }
-    .video-panel video { display: block; width: 100%; max-height: 570px; background: #000; }
 
-    .gallery-feature {
-      max-width: 480px;
-      margin: 0 auto 25px;
+    .gallery-item img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-caption {
+      padding: 12px;
+      text-align: center;
+      color: var(--navy);
+      font-weight: 700;
+      background: var(--white);
+    }
+
+    /* VIDEO */
+    .video-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .video-section .section-title h2,
+    .video-section .section-title p {
+      color: var(--white);
+    }
+
+    .video-box {
+      max-width: 850px;
+      margin: auto;
+      background: #000;
+      border: 3px solid var(--gold);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .video-box video {
+      display: block;
+      width: 100%;
+      max-height: 500px;
+    }
+
+    /* TRAINING */
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .training-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .training-card i {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .training-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .training-card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .training-note {
+      margin-top: 30px;
+      background: #f1ecdf;
+      border-radius: 14px;
+      padding: 22px;
       text-align: center;
     }
-    .main-trigger-image {
-      display: block;
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      border-radius: 17px;
-      cursor: zoom-in;
-      box-shadow: var(--shadow);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .gallery-feature h3 { margin: 13px 0 0; color: var(--navy); }
-    .main-trigger-image:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(16,27,49,.14); }
-    .view-all-btn {
-      margin-top: 17px;
-      padding: 12px 23px;
-      color: var(--navy);
-      background: var(--gold);
-      border: 2px solid var(--gold);
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 800;
-      transition: .2s;
-    }
-    .view-all-btn:hover { color: var(--gold); background: var(--navy); }
-    .hidden-gallery {
-      display: none;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-    }
-    .hidden-gallery.is-open { display: grid; animation: fadeIn .35s ease; }
-    .flexible-thumb {
-      width: 100%;
-      height: 285px;
-      object-fit: cover;
-      border-radius: 14px;
-      cursor: zoom-in;
-      transition: transform .2s;
-      box-shadow: 0 7px 20px rgba(16,27,49,.09);
-    }
-    .flexible-thumb:hover { transform: translateY(-3px); }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    /* CONTACT */
+    .contact-section {
+      background: #f1ecdf;
     }
 
-    .training-panel {
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 35px;
+    }
+
+    .contact-info, .contact-form {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-info h3, .contact-form h3 {
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
       align-items: center;
-      padding: clamp(25px, 5vw, 42px);
-      background: var(--gold-light);
-      border: 1px solid #f0dfb5;
-      border-radius: var(--radius);
+      gap: 13px;
+      margin: 17px 0;
+      color: var(--muted);
+      overflow-wrap: anywhere;
     }
-    .training-panel h2 { margin: 0 0 12px; color: var(--navy); }
-    .training-panel p { margin: 0 0 13px; color: #4f5664; }
-    .training-list { margin: 0; padding-left: 22px; color: #4f5664; }
-    .training-cta {
-      padding: 24px;
-      color: #fff;
-      background: var(--navy);
-      border-radius: 17px;
-    }
-    .training-cta h3 { margin: 0 0 10px; color: var(--gold); }
-    .training-cta p { color: #e5eaf2; }
 
-    .contact-section { background: #f1efe9; }
-    .contact-box {
-      max-width: 760px;
-      margin: 30px auto 0;
-      padding: clamp(22px, 5vw, 42px);
-      background: #fff;
-      border-top: 7px solid var(--gold);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .form-label {
-      display: block;
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-weight: 700;
-    }
-    .form-label i { width: 22px; color: #b88718; }
-    input[type="text"], input[type="tel"], select, textarea {
-      display: block;
-      width: 100%;
-      min-height: 48px;
-      margin: 0 0 19px;
-      padding: 12px 14px;
-      color: var(--ink);
-      background: #fcfcfb;
-      border: 1.5px solid #dedfdf;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    textarea { min-height: 120px; resize: vertical; }
-    input:focus, select:focus, textarea:focus {
-      outline: 3px solid rgba(229,185,79,.22);
-      border-color: #c99b31;
-      background: #fff;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .check-grid {
+    .contact-item i {
+      width: 40px;
+      height: 40px;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 12px;
-      margin: 0 0 20px;
-      padding: 17px;
-      background: #fffaf0;
-      border: 1px solid #ead8aa;
-      border-radius: 12px;
-    }
-    .check-grid label { display: flex; align-items: center; gap: 9px; font-size: .94rem; }
-    .check-grid input { accent-color: var(--navy); width: 17px; height: 17px; }
-    .submit-btn {
-      width: 100%;
-      min-height: 54px;
-      padding: 13px 20px;
+      place-items: center;
+      background: #fff5d9;
       color: var(--navy);
-      background: var(--gold);
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 1.08rem;
-      font-weight: 800;
-      transition: .2s;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
-    .submit-btn:hover { color: var(--gold); background: var(--navy); border-color: var(--navy); }
-    .form-hint { margin: -7px 0 20px; color: var(--muted); font-size: .82rem; }
 
-    .contact-direct {
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      outline: none;
+      background: #fff;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 35px 0 20px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      color: var(--gold);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-    .contact-direct a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      color: var(--navy);
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
+      gap: 18px;
+      margin: 20px 0;
     }
 
-    .zoom-modal {
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.1);
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 19px;
+      transition: .3s;
+    }
+
+    .social-links a:hover {
+      background: var(--gold);
+      color: var(--navy);
+      transform: translateY(-4px);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 22px;
+      padding-top: 18px;
+      color: #c5c9d0;
+      font-size: .85rem;
+    }
+
+    /* IMAGE ZOOM */
+    .image-modal {
       display: none;
       position: fixed;
       inset: 0;
       z-index: 2000;
+      background: rgba(0,0,0,.94);
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: rgba(0,0,0,.96);
       touch-action: none;
     }
-    .zoom-modal.is-visible { display: flex; }
-    .zoom-modal-content {
-      max-width: 94vw;
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .modal-image {
+      max-width: 92vw;
       max-height: 88vh;
       object-fit: contain;
-      transform-origin: center center;
+      transform-origin: center;
       cursor: grab;
       user-select: none;
       -webkit-user-drag: none;
     }
-    .close-zoom {
+
+    .modal-close {
       position: absolute;
-      top: 17px;
-      right: 18px;
-      z-index: 2010;
-      width: 47px;
-      height: 47px;
-      color: #fff;
-      background: rgba(255,255,255,.13);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 50%;
+      top: 18px;
+      right: 25px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 38px;
       cursor: pointer;
-      font-size: 1.7rem;
+      z-index: 5;
     }
-    .zoom-info-tip {
+
+    .zoom-controls {
       position: absolute;
-      bottom: 18px;
-      max-width: calc(100% - 30px);
-      padding: 7px 15px;
-      color: #fff;
-      background: rgba(0,0,0,.55);
-      border-radius: 999px;
-      text-align: center;
-      font-size: .76rem;
-      line-height: 1.6;
-      pointer-events: none;
+      bottom: 20px;
+      display: flex;
+      gap: 12px;
     }
 
-    footer {
-      padding: 35px 18px;
-      color: #e9edf4;
-      background: var(--navy);
-      border-top: 4px solid var(--gold);
-      text-align: center;
-    }
-    footer strong { color: var(--gold); }
-    footer p { margin: 5px 0; }
-    .back-top {
-      display: inline-block;
-      margin-top: 13px;
-      color: var(--gold);
-      text-decoration: none;
-      font-size: .9rem;
+    .zoom-controls button {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      background: var(--gold);
+      font-size: 20px;
+      cursor: pointer;
     }
 
-    @media (max-width: 850px) {
-      .focus-grid, .service-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .training-panel { grid-template-columns: 1fr; }
-      .nav-wrap { min-height: 68px; }
-      .menu-toggle { display: inline-flex; align-items: center; gap: 8px; }
-      .main-nav {
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: .8rem;
+      }
+
+      .category-grid, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 68px;
         left: 0;
         right: 0;
-        padding: 12px 16px 18px;
         background: var(--navy);
-        border-bottom: 2px solid var(--gold);
+        padding: 15px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-top: 1px solid rgba(229,185,79,.3);
       }
-      .main-nav.is-open { display: grid; }
-      .main-nav a { padding: 11px 13px; }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 12px 0;
+        font-size: .95rem;
+      }
+
+      .hero {
+        min-height: 540px;
+        background-position: center;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .about-image img {
+        height: 330px;
+      }
+
+      .category-grid, .gallery-grid, .training-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .gallery-item img {
+        height: 190px;
+      }
+
+      .gallery-caption {
+        font-size: .82rem;
+        padding: 9px 5px;
+      }
+
+      .about-points {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info, .contact-form {
+        padding: 22px;
+      }
     }
-    @media (max-width: 560px) {
-      .hero { min-height: 450px; padding: 70px 18px; }
-      .section { padding: 56px 0; }
-      .focus-grid, .service-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; gap: 0; }
-      .check-grid { grid-template-columns: 1fr 1fr; }
-      .main-trigger-image { height: 320px; }
-      .flexible-thumb { height: 245px; }
-      .brand-name { font-size: .91rem; }
-      .brand-subtitle { font-size: .60rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+
+    @media (max-width: 380px) {
+      .category-grid, .gallery-grid, .training-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
     }
   </style>
 </head>
 
-<body id="top">
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#top" aria-label="Anguach CraftTech መነሻ">
-        <span class="brand-mark"><i class="fa-solid fa-scissors" aria-hidden="true"></i></span>
-        <span>
-          <span class="brand-name">Anguach CraftTech</span>
-          <span class="brand-subtitle">አንጓች የእጅ ጥበብና ቴክኖሎጂ</span>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-scissors"></i></span>
+        <span class="brand-name">
+          <strong>Anguach CraftTech</strong>
+          <small>አንጓች የእጅ ጥበብና ቴክኖሎጂ</small>
         </span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i> ማውጫ
+      <button class="menu-toggle" id="menuToggle" aria-label="ምናሌ ክፈት">
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <nav class="main-nav" id="mainNav" aria-label="ዋና ማውጫ">
-        <a href="#about">ስለ እኛ</a>
-        <a href="#products">ምርቶች</a>
-        <a href="#gallery">የሥራ ማሳያ</a>
-        <a href="#training">ሥልጠና</a>
-        <a href="#video">ቪዲዮ</a>
-        <a href="#contact">ያግኙን</a>
-      </nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">መነሻ</a></li>
+        <li><a href="#about">ስለ እኛ</a></li>
+        <li><a href="#products">ምርቶች</a></li>
+        <li><a href="#gallery">የምርት ማዕከል</a></li>
+        <li><a href="#training">ስልጠና</a></li>
+        <li><a href="#contact">አግኙን</a></li>
+      </ul>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
       <div class="hero-content">
-        <p class="eyebrow">ጥበብ • ፈጠራ • ቴክኖሎጂ</p>
+        <span class="hero-tag">ፈጠራ • ጥበብ • ቴክኖሎጂ</span>
         <h1>Anguach CraftTech</h1>
-        <p class="hero-amharic-name">አንጓች የእጅ ጥበብና ቴክኖሎጂ</p>
-        <p>የእጅ ጥበብን ከፈጠራና ከቴክኖሎጂ ጋር በማቀናጀት ውብ ምርቶችን፣ የሙያ ክህሎትንና የሥራ እድሎችን እንፈጥራለን።</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#gallery"><i class="fa-solid fa-images"></i> ስራዎቻችንን ይመልከቱ</a>
-          <a class="btn btn-outline" href="#contact"><i class="fa-solid fa-paper-plane"></i> ትዕዛዝ / ምዝገባ</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="about-panel">
-        <h2>ስለ Anguach CraftTech</h2>
+        <h2>አንጓች የእጅ ጥበብና ቴክኖሎጂ</h2>
         <p>
-          Anguach CraftTech የእጅ ጥበብን፣ የክሮሼት ሙያንና ዘመናዊ የፈጠራ አስተሳሰብን በማቀናጀት
-          ጥራት ያላቸው ምርቶችን ለደንበኞች ለማቅረብ የተቋቋመ የሙያና የፈጠራ ብራንድ ነው።
-          ከውበት ባለፈ ሰዎች ክህሎታቸውን እንዲያዳብሩ፣ የሥራ እድል እንዲፈጥሩና
-          በራሳቸው ጥረት ገቢ እንዲያገኙ ማገዝን ዓላማ አድርጎ ይሰራል።
+          የእጅ ጥበብን ከፈጠራና ከቴክኖሎጂ ጋር በማቀናጀት
+          ውብ ምርቶችን፣ የሙያ ክህሎትንና የሥራ እድሎችን እንፈጥራለን።
         </p>
-        <div class="about-note">
-          ራዕያችን፦ በክሮሼትና በእጅ ጥበብ ሙያ ሰዎችን ማብቃት፣ የሥራ እድል መፍጠርና የአካባቢያዊ ጥበብን ማሳደግ።
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="products">
-      <h2 class="section-heading">ዋና ዋና ምርቶቻችን</h2>
-      <div class="heading-line"></div>
-      <p class="section-intro">በጥንቃቄ የተሰሩ፣ ውበትንና ጥራትን ያጣመሩ የክሮሼት ምርቶች። በደንበኛ ፍላጎት መሠረት የቀለምና የመጠን ለውጦች ሊደረጉ ይችላሉ።</p>
-
-      <div class="focus-grid">
-        <article class="focus-item">
-          <div class="focus-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
-          <h3>የክሮሼት ቦርሳዎች</h3>
-          <p>ለዕለታዊ አጠቃቀምና ለተለያዩ ዝግጅቶች የሚሆኑ የተለያዩ ዲዛይኖች።</p>
-        </article>
-        <article class="focus-item">
-          <div class="focus-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></div>
-          <h3>የጠረጴዛ ማስጌጫዎች</h3>
-          <p>የጠረጴዛ ማት፣ የቤት ማስዋቢያና ሌሎች የቤት ውስጥ ጥበባዊ ውጤቶች።</p>
-        </article>
-        <article class="focus-item">
-          <div class="focus-icon"><i class="fa-solid fa-shoe-prints" aria-hidden="true"></i></div>
-          <h3>የክሮሼት ጫማዎች</h3>
-          <p>ለተለያዩ ዕድሜዎችና ፍላጎቶች የሚዘጋጁ ምቹ የእጅ ጥበብ ጫማዎች።</p>
-        </article>
-        <article class="focus-item">
-          <div class="focus-icon"><i class="fa-solid fa-shirt" aria-hidden="true"></i></div>
-          <h3>ልብሶችና መለዋወጫዎች</h3>
-          <p>ኮፍያ፣ ሹራብ፣ ቀሚስ፣ ክሮፕ ቶፕና ሌሎች በትዕዛዝ የሚሰሩ ምርቶች።</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="gallery">
-      <h2 class="section-heading">የሥራዎቻችን ማሳያ</h2>
-      <div class="heading-line"></div>
-      <p class="section-intro">ዋናውን ምስል በመጫን በትልቅ መጠን ይመልከቱ። ሌሎችን ምርቶች ለማየት ከታች ያለውን ቁልፍ ይጫኑ።</p>
-
-      <div class="gallery-feature">
-        <img src="croptop.jpg" alt="የክሮሼት ክሮፕ ቶፕ" class="main-trigger-image" loading="lazy" onclick="openZoomModal(this.src)">
-        <h3>የክሮሼት ክሮፕ ቶፕ</h3>
-        <button class="view-all-btn" type="button" onclick="toggleFullGallery()" id="btnText" aria-expanded="false" aria-controls="fullGallery">
-          ሌሎች ምርቶችን ይመልከቱ ↓
-        </button>
-      </div>
-
-      <div class="hidden-gallery" id="fullGallery">
-        <img src="sweater.jpg" alt="የክሮሼት ሹራብ" class="flexible-thumb" loading="lazy" onclick="openZoomModal(this.src)">
-        <img src="boy.jpg" alt="የልጆች ሹራብ" class="flexible-thumb" loading="lazy" onclick="openZoomModal(this.src)">
-        <img src="hat1.jpg" alt="የክሮሼት ኮፍያ" class="flexible-thumb" loading="lazy" onclick="openZoomModal(this.src)">
-        <img src="crochet.jpg" alt="የክሮሼት የልጆች ቀሚስ" class="flexible-thumb" loading="lazy" onclick="openZoomModal(this.src)">
-      </div>
-    </section>
-
-    <section class="dark-section" id="video">
-      <div class="section">
-        <h2 class="section-heading">ስራዎቻችን በቪዲዮ</h2>
-        <p class="section-intro">የእጅ ጥበቡን ውበትና የሥራ ሂደቱን በተንቀሳቃሽ ምስል ይመልከቱ።</p>
-        <div class="video-panel">
-          <video controls muted loop playsinline preload="metadata" poster="croptop.jpg">
-            <source src="dress.mp4" type="video/mp4">
-            አሳሽዎ የቪዲዮ ማጫወቻን አይደግፍም።
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="training">
-      <div class="training-panel">
-        <div>
-          <h2>የክሮሼት ሙያ ሥልጠና</h2>
-          <p>
-            ክሮሼትን ከመሠረቱ ጀምሮ መማር ለሚፈልጉና አስቀድመው ልምድ ያላቸው
-            ሰዎች ክህሎታቸውን ማሳደግ ለሚፈልጉ የሚያገለግል የሥልጠና እድል እናዘጋጃለን።
-          </p>
-          <ul class="training-list">
-            <li>ለጀማሪዎች ከመሠረታዊ የክሮሼት አሰራር ጀምሮ ማስተማር።</li>
-            <li>ቦርሳ፣ ኮፍያ፣ የቤት ማስጌጫና ሌሎች ምርቶችን ማምረት።</li>
-            <li>የምርት ዋጋ አወሳሰን፣ ጥራትና የሽያጭ መሠረቶችን መማር።</li>
-            <li>በተማሪዎች የጊዜ ምቹነት መሠረት የሥልጠና ሰዓት ማደራጀት።</li>
-          </ul>
-        </div>
-        <div class="training-cta">
-          <h3>መማር ይፈልጋሉ?</h3>
-          <p>በታች ያለውን ቅጽ በመሙላት የሥልጠና ፍላጎትዎን ያሳውቁን። ስለ ሥልጠናው ዝርዝር መረጃ እንደርስዎ ፍላጎት እንወያያለን።</p>
-          <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-user-plus"></i> ለሥልጠና ይመዝገቡ</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="section">
-        <h2 class="section-heading" style="text-align:center;">ያግኙን / ይመዝገቡ / ይዘዙ</h2>
-        <p class="section-intro" style="margin-left:auto;margin-right:auto;text-align:center;">
-          ምርት ለማዘዝ፣ ለሥልጠና ለመመዝገብ ወይም እንደ ባለሙያ አብረውን ለመስራት ይህን ቅጽ ይሙሉ።
-        </p>
-
-        <div class="contact-box">
-          <!-- የFormspree አድራሻውን እንደ ቀድሞው አስቀምጠነዋል። -->
-          <form action="https://formspree.io/f/mdayzrje" method="POST">
-            <label class="form-label" for="purpose"><i class="fa-solid fa-bullseye"></i> የመጡበት ዓላማ</label>
-            <select id="purpose" name="purpose" required>
-              <option value="">-- እባክዎን ይምረጡ --</option>
-              <option value="Product order">ምርት ለማዘዝ</option>
-              <option value="Crochet training">ክሮሼት ለመማር</option>
-              <option value="Professional collaboration">እንደ ባለሙያ አብሮ ለመስራት</option>
-              <option value="Other inquiry">ሌላ ጥያቄ / ትብብር</option>
-            </select>
-
-            <label class="form-label" for="name"><i class="fa-solid fa-user"></i> ሙሉ ስም</label>
-            <input id="name" type="text" name="name" placeholder="ሙሉ ስምዎን እዚህ ይጻፉ" autocomplete="name" required>
-
-            <div class="form-row">
-              <div>
-                <label class="form-label" for="phone"><i class="fa-solid fa-phone"></i> ስልክ ቁጥር</label>
-                <input id="phone" type="tel" name="phone" placeholder="09xxxxxxxx" autocomplete="tel" required>
-              </div>
-              <div>
-                <label class="form-label" for="address"><i class="fa-solid fa-location-dot"></i> አድራሻ</label>
-                <input id="address" type="text" name="address" placeholder="ከተማ / ክፍለ ከተማ" autocomplete="street-address" required>
-              </div>
-            </div>
-
-            <label class="form-label"><i class="fa-solid fa-list-check"></i> የሚፈልጉትን ምርት ወይም የሙያ ዘርፍ ይምረጡ</label>
-            <div class="check-grid">
-              <label><input type="checkbox" name="interest[]" value="Bag"> ቦርሳ</label>
-              <label><input type="checkbox" name="interest[]" value="Table mat"> የጠረጴዛ ማት</label>
-              <label><input type="checkbox" name="interest[]" value="Shoes"> ጫማ</label>
-              <label><input type="checkbox" name="interest[]" value="Hat"> ኮፍያ</label>
-              <label><input type="checkbox" name="interest[]" value="Sweater"> ሹራብ</label>
-              <label><input type="checkbox" name="interest[]" value="Dress"> ቀሚስ / ልብስ</label>
-              <label><input type="checkbox" name="interest[]" value="Home decor"> የቤት ማስጌጫ</label>
-              <label><input type="checkbox" name="interest[]" value="Crochet training"> ሥልጠና</label>
-              <label><input type="checkbox" name="interest[]" value="Professional collaboration"> የሙያ ትብብር</label>
-              <label><input type="checkbox" name="interest[]" value="Other"> ሌላ</label>
-            </div>
-
-            <label class="form-label" for="deliveryDate"><i class="fa-solid fa-calendar-days"></i> የሚፈልጉት የደረሰኝ ቀን (ለትዕዛዝ)</label>
-            <div class="form-row">
-              <input id="deliveryDate" type="text" name="delivery_date" placeholder="ለምሳሌ፦ ግንቦት 20">
-              <select name="calendar_type" aria-label="የቀን አቆጣጠር">
-                <option value="Ethiopian">የኢትዮጵያ አቆጣጠር</option>
-                <option value="Gregorian">የፈረንጅ አቆጣጠር</option>
-              </select>
-            </div>
-
-            <label class="form-label" for="message"><i class="fa-solid fa-pen"></i> ተጨማሪ ማብራሪያ</label>
-            <textarea id="message" name="message" placeholder="የምርቱን ቀለም፣ መጠን፣ የሥልጠና ፍላጎት ወይም ሌላ መረጃ እዚህ ይግለጹ..." required></textarea>
-
-            <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> መረጃውን ላክ</button>
-          </form>
-        </div>
-
-        <div class="contact-direct">
-          <a href="https://youtube.com/@anguachcrochetech" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-youtube"></i> YouTube ላይ ይከታተሉን
+        <div class="hero-buttons">
+          <a href="#gallery" class="btn">
+            <i class="fa-solid fa-images"></i> ምርቶቻችንን ይመልከቱ
+          </a>
+          <a href="#training" class="btn btn-outline">
+            <i class="fa-solid fa-graduation-cap"></i> ስልጠና ይመልከቱ
           </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <div class="zoom-modal" id="zoomModal" role="dialog" aria-modal="true" aria-label="የምስል ማጉያ" onclick="if(event.target === this) closeZoomModal()">
-    <button class="close-zoom" type="button" aria-label="ዝጋ" onclick="closeZoomModal()">&times;</button>
-    <img class="zoom-modal-content" id="zoomedImg" alt="የተመረጠ የምርት ምስል">
-    <div class="zoom-info-tip">ለማጉላት ሁለት ጣቶችን ወደ ውጭ ያስፋፉ ↔ ለማሳነስ ወደ ውስጥ ያቀራርቡ፤ ለመዝጋት × ይጫኑ</div>
-  </div>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>ስለ አንጓች CraftTech</h2>
+        <span></span>
+        <p>ጥበብን ወደ እድል፣ ክህሎትን ወደ ሥራ እንቀይራለን።</p>
+      </div>
 
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="Images/danteil.jpg" alt="የአንጓች CraftTech መስራች" onclick="openImage(this.src)">
+        </div>
+
+        <div class="about-text">
+          <h3>የእጅ ጥበብን ከቴክኖሎጂ ጋር ማቀናጀት</h3>
+          <p>
+            Anguach CraftTech በክሮሼትና በሌሎች የእጅ ጥበብ ሥራዎች
+            ውብ፣ ጥራት ያላቸውና የወቅቱን ፍላጎት የሚያሟሉ ምርቶችን
+            ለማቅረብ የተቋቋመ የፈጠራ ሥራ ነው።
+          </p>
+          <p>
+            ዓላማችን በክሮሼት ሙያ ሰዎችን ማብቃት፣ የሥራ እድል
+            መፍጠርና የተማሩትን ክህሎት ወደ ገቢ ማስገኛ ሥራ መቀየር ነው።
+          </p>
+          <div class="about-points">
+            <div class="point"><i class="fa-solid fa-check-circle"></i> ጥራት ያላቸው ምርቶች</div>
+            <div class="point"><i class="fa-solid fa-check-circle"></i> የሙያ ማስተማር</div>
+            <div class="point"><i class="fa-solid fa-check-circle"></i> የሥራ እድል ፈጠራ</div>
+            <div class="point"><i class="fa-solid fa-check-circle"></i> ፈጠራና ቴክኖሎጂ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section categories" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>የምርት አይነቶቻችን</h2>
+        <span></span>
+        <p>በእጅ የተሰሩ ልዩ እና ውብ የክሮሼት ምርቶች።</p>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-card">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3>የክሮሼት ቦርሳዎች</h3>
+          <p>ዘመናዊና ውብ የእጅ ቦርሳዎች</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-shirt"></i>
+          <h3>የሴቶች አልባሳት</h3>
+          <p>ድሬሶች፣ ቶፖችና ካርዲጋኖች</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-house"></i>
+          <h3>የቤት ማስዋቢያዎች</h3>
+          <p>የጠረጴዛ ማስዋቢያና ሌሎች ምርቶች</p>
+        </div>
+
+        <div class="category-card">
+          <i class="fa-solid fa-child"></i>
+          <h3>የህፃናት ልብሶች</h3>
+          <p>ለህፃናት የተሰሩ ውብ ልብሶች</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>የምርቶቻችን ማዕከል</h2>
+        <span></span>
+        <p>የተሰሩ ምርቶቻችንን ይመልከቱ። ፎቶዎቹን በመንካት በትልቁ ማየት ይችላሉ።</p>
+      </div>
+
+      <!-- BAGS -->
+      <div class="gallery-category">
+        <h3>የክሮሼት ቦርሳዎች</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Images/Bags/bag1.jpg" alt="የክሮሼት ቦርሳ 1" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ቦርሳ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Bags/bag2.jpg" alt="የክሮሼት ቦርሳ 2" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">ዘመናዊ ቦርሳ</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WOMEN -->
+      <div class="gallery-category">
+        <h3>የሴቶች አልባሳት</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Images/Woman/woman dress.jpg" alt="የክሮሼት ድሬስ" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ድሬስ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Woman/Woman top and cardigan.jpg" alt="የክሮሼት ቶፕና ካርዲጋን" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">ቶፕና ካርዲጋን</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Woman/gawun.jpg" alt="የክሮሼት ጋውን" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ጋውን</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCARVES -->
+      <div class="gallery-category">
+        <h3>ስካርፎች</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Images/escarf/escarf1.jpg" alt="የክሮሼት ስካርፍ 1" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ስካርፍ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/escarf/escarf2.jpg" alt="የክሮሼት ስካርፍ 2" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">ውብ ስካርፍ</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE MATS -->
+      <div class="gallery-category">
+        <h3>የጠረጴዛ ማስዋቢያዎች</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Images/Tablemates/tablemat1.jpg" alt="የጠረጴዛ ማስዋቢያ 1" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የጠረጴዛ ማስዋቢያ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Tablemates/tablemate2.jpg" alt="የጠረጴዛ ማስዋቢያ 2" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ማት</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHILDREN -->
+      <div class="gallery-category">
+        <h3>የህፃናት ልብሶች</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="Images/Children/children dress.jpg" alt="የህፃናት ድሬስ" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የህፃናት ድሬስ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Children/sweaterr.ipg" alt="የህፃናት ሹራብ" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የህፃናት ሹራብ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Children/sweaterg.jpg" alt="የህፃናት ሹራብ 2" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የክሮሼት ሹራብ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="Images/Children/babyhat.jpg" alt="የህፃናት ኮፍያ" loading="lazy" onclick="openImage(this.src)">
+            <div class="gallery-caption">የህፃናት ኮፍያ</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section video-section" id="video">
+    <div class="container">
+      <div class="section-title">
+        <h2>የክሮሼት ሥራዎቻችን</h2>
+        <span></span>
+        <p>የእጅ ጥበብ ሥራዎቻችንን በቪዲዮ ይመልከቱ።</p>
+      </div>
+
+      <div class="video-box">
+        <video controls playsinline preload="metadata">
+          <source src="dress.mp4" type="video/mp4">
+          ይቅርታ፣ አሳሽዎ ቪዲዮውን መክፈት አይችልም።
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="section" id="training">
+    <div class="container">
+      <div class="section-title">
+        <h2>የክሮሼት ሙያ ስልጠና</h2>
+        <span></span>
+        <p>ከመሠረታዊ ክህሎት ጀምሮ እስከ ምርት ማዘጋጀትና ሽያጭ ድረስ።</p>
+      </div>
+
+      <div class="training-grid">
+        <div class="training-card">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>መሠረታዊ ስልጠና</h3>
+          <p>የክሮሼት መሠረታዊ አሰራሮችን፣ የመርፌ አያያዝንና የክር አጠቃቀምን መማር።</p>
+        </div>
+
+        <div class="training-card">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>የላቀ ክህሎት</h3>
+          <p>ቦርሳዎችን፣ ኮፍያዎችን፣ ልብሶችንና የቤት ማስዋቢያዎችን ማምረት።</p>
+        </div>
+
+        <div class="training-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>ሥራና ገቢ ፈጠራ</h3>
+          <p>የምርት ወጪ ማስላት፣ ዋጋ መወሰን፣ ምርት ማስተዋወቅና መሸጥ።</p>
+        </div>
+      </div>
+
+      <div class="training-note">
+        <h3>ክህሎትዎን ወደ ሥራ ይቀይሩ!</h3>
+        <p>ስለ ስልጠናው የበለጠ መረጃ ለማግኘት ያግኙን።</p>
+        <br>
+        <a href="#contact" class="btn">ለስልጠና ያግኙን</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>አግኙን</h2>
+        <span></span>
+        <p>ለምርት ጥያቄ፣ ለትዕዛዝ፣ ለስልጠናና ለትብብር ያነጋግሩን።</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>የመገኛ መንገዶች</h3>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>በኢሜይል ያግኙን</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-brands fa-youtube"></i>
+            <a href="https://youtube.com/@anguachcrochetech" target="_blank" rel="noopener">
+              Anguach Crochetech
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>Anguach CraftTech</span>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-handshake"></i>
+            <span>ለትብብርና ለስልጠና ጥያቄዎች ክፍት ነን።</span>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mdayzrje" method="POST">
+          <h3>መልዕክት ይላኩልን</h3>
+          <input type="text" name="name" placeholder="ሙሉ ስም" required>
+          <input type="email" name="email" placeholder="ኢሜይል አድራሻ" required>
+          <input type="text" name="subject" placeholder="የመልዕክቱ ርዕስ">
+          <textarea name="message" placeholder="መልዕክትዎን እዚህ ይጻፉ..." required></textarea>
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-paper-plane"></i> መልዕክት ላክ
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p><strong>Anguach CraftTech</strong> | አንጓች የእጅ ጥበብና ቴክኖሎጂ</p>
-    <p>ጥበብን በፈጠራና በቴክኖሎጂ እናሳድጋለን።</p>
-    <p>© <span id="year"></span> Anguach CraftTech. መብቱ በሕግ የተጠበቀ ነው።</p>
-    <a class="back-top" href="#top"><i class="fa-solid fa-arrow-up"></i> ወደ ላይ ተመለስ</a>
+    <div class="container">
+      <div class="footer-brand">Anguach CraftTech</div>
+      <p>እጅ ጥበብን ከፈጠራና ከቴክኖሎጂ ጋር!</p>
+
+      <div class="social-links">
+        <a href="https://youtube.com/@anguachcrochetech" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Anguach CraftTech. መብቱ በሙሉ የተጠበቀ ነው።
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // የስልክ ማውጫ መክፈቻ / መዝጊያ
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
+  <!-- IMAGE ZOOM MODAL -->
+  <div class="image-modal" id="imageModal">
+    <button class="modal-close" onclick="closeImage()" aria-label="ዝጋ">&times;</button>
+    <img src="" alt="ትልቅ የምርት ፎቶ" class="modal-image" id="modalImage">
+    <div class="zoom-controls">
+      <button onclick="changeZoom(0.2)" aria-label="አሳድግ">+</button>
+      <button onclick="changeZoom(-0.2)" aria-label="ቀንስ">−</button>
+      <button onclick="resetZoom()" aria-label="መጀመሪያ ሁኔታ">↺</button>
+    </div>
+  </div>
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("is-open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
+  <script>
+    // MOBILE MENU
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+      const icon = menuToggle.querySelector("i");
+
+      if (navLinks.classList.contains("show")) {
+        icon.classList.replace("fa-bars", "fa-xmark");
+      } else {
+        icon.classList.replace("fa-xmark", "fa-bars");
+      }
     });
 
-    mainNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+        const icon = menuToggle.querySelector("i");
+        icon.classList.replace("fa-xmark", "fa-bars");
       });
     });
 
-    // የምርት ፎቶ አልበም
-    function toggleFullGallery() {
-      const gallery = document.getElementById("fullGallery");
-      const button = document.getElementById("btnText");
-      const isOpening = !gallery.classList.contains("is-open");
+    // CURRENT YEAR
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      gallery.classList.toggle("is-open", isOpening);
-      button.setAttribute("aria-expanded", String(isOpening));
-      button.textContent = isOpening
-        ? "ምርቶቹን ደብቅ ↑"
-        : "ሌሎች ምርቶችን ይመልከቱ ↓";
-    }
+    // IMAGE ZOOM
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
 
-    // የፎቶ ማጉያ
-    const zModal = document.getElementById("zoomModal");
-    const zImg = document.getElementById("zoomedImg");
-    let currentScale = 1;
+    let zoom = 1;
     let startDistance = 0;
-    let isDragging = false;
-    let startX = 0, startY = 0, translateX = 0, translateY = 0;
+    let startZoom = 1;
 
-    function openZoomModal(src) {
-      zModal.classList.add("is-visible");
-      zImg.src = src;
-      currentScale = 1;
-      translateX = 0;
-      translateY = 0;
-      updateTransform();
+    function openImage(src) {
+      modalImage.src = src;
+      modal.classList.add("active");
+      resetZoom();
       document.body.style.overflow = "hidden";
     }
 
-    function closeZoomModal() {
-      zModal.classList.remove("is-visible");
+    function closeImage() {
+      modal.classList.remove("active");
+      modalImage.src = "";
       document.body.style.overflow = "";
-      zImg.src = "";
     }
 
-    function updateTransform() {
-      zImg.style.transform =
-        `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+    function changeZoom(amount) {
+      zoom = Math.max(0.5, Math.min(4, zoom + amount));
+      modalImage.style.transform = "scale(" + zoom + ")";
     }
 
-    function getTouchDistance(touches) {
-      return Math.hypot(
-        touches[0].pageX - touches[1].pageX,
-        touches[0].pageY - touches[1].pageY
-      );
+    function resetZoom() {
+      zoom = 1;
+      modalImage.style.transform = "scale(1)";
     }
 
-    // በኮምፒውተር ላይ የመዳፊት ጎማን በመጠቀም ማጉላት / ማሳነስ
-    zModal.addEventListener("wheel", event => {
-      if (!zModal.classList.contains("is-visible")) return;
+    modal.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        closeImage();
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") closeImage();
+      if (event.key === "+" || event.key === "=") changeZoom(0.2);
+      if (event.key === "-") changeZoom(-0.2);
+    });
+
+    // MOUSE WHEEL ZOOM
+    modalImage.addEventListener("wheel", function(event) {
       event.preventDefault();
-      currentScale = Math.min(4, Math.max(1, currentScale + (event.deltaY < 0 ? 0.15 : -0.15)));
-      if (currentScale === 1) { translateX = 0; translateY = 0; }
-      updateTransform();
+      changeZoom(event.deltaY < 0 ? 0.15 : -0.15);
     }, { passive: false });
 
-    // የቁልፍ ሰሌዳ መቆጣጠሪያ፦ + ለማጉላት፣ - ለማሳነስ፣ Esc ለመዝጋት
-    document.addEventListener("keydown", event => {
-      if (!zModal.classList.contains("is-visible")) return;
-      if (event.key === "+" || event.key === "=") {
-        currentScale = Math.min(4, currentScale + 0.2);
-        updateTransform();
-      } else if (event.key === "-") {
-        currentScale = Math.max(1, currentScale - 0.2);
-        if (currentScale === 1) { translateX = 0; translateY = 0; }
-        updateTransform();
-      }
-    });
-
-    zModal.addEventListener("touchstart", event => {
+    // TOUCH PINCH ZOOM
+    modalImage.addEventListener("touchstart", function(event) {
       if (event.touches.length === 2) {
-        startDistance = getTouchDistance(event.touches);
-      } else if (event.touches.length === 1 && currentScale > 1) {
-        isDragging = true;
-        startX = event.touches[0].pageX - translateX;
-        startY = event.touches[0].pageY - translateY;
+        startDistance = Math.hypot(
+          event.touches[0].clientX - event.touches[1].clientX,
+          event.touches[0].clientY - event.touches[1].clientY
+        );
+        startZoom = zoom;
+      }
+    }, { passive: true });
+
+    modalImage.addEventListener("touchmove", function(event) {
+      if (event.touches.length === 2) {
+        event.preventDefault();
+
+        const currentDistance = Math.hypot(
+          event.touches[0].clientX - event.touches[1].clientX,
+          event.touches[0].clientY - event.touches[1].clientY
+        );
+
+        zoom = Math.max(0.5, Math.min(4,
+          startZoom * (currentDistance / startDistance)
+        ));
+
+        modalImage.style.transform = "scale(" + zoom + ")";
       }
     }, { passive: false });
-
-    zModal.addEventListener("touchmove", event => {
-      if (event.touches.length === 2 && startDistance > 0) {
-        event.preventDefault();
-        const distance = getTouchDistance(event.touches);
-        const factor = distance / startDistance;
-        currentScale = Math.min(4, Math.max(1, currentScale * factor));
-        startDistance = distance;
-        if (currentScale === 1) {
-          translateX = 0;
-          translateY = 0;
-        }
-        updateTransform();
-      } else if (event.touches.length === 1 && isDragging) {
-        event.preventDefault();
-        translateX = event.touches[0].pageX - startX;
-        translateY = event.touches[0].pageY - startY;
-        updateTransform();
-      }
-    }, { passive: false });
-
-    zModal.addEventListener("touchend", event => {
-      if (event.touches.length < 2) startDistance = 0;
-      if (event.touches.length === 0) isDragging = false;
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && zModal.classList.contains("is-visible")) {
-        closeZoomModal();
-      }
-    });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
